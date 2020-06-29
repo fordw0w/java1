@@ -21,14 +21,16 @@ public class AccuracyDoubleFloat {
     }
     public static double calculateAccuracy(double radius) {
 
-       double d1= volumeBallDouble( 6371.2);
-       float f2 = volumeBallFloat(6371.2f);
-       float f3 = (float) d1 - f2;
+       final double f3 = volumeBallDouble( 6371.2) - volumeBallFloat(6371.2f);
         System.out.println(f3);
 return f3;
     }
 
     public static void main(String[] args) {
+        // -163798.93103027344
+        //  -131072.0
+        calculateAccuracy(6371.2);
+       // System.out.println(volumeBallDouble(6371.2) - volumeBallFloat(6371.2f));
 
 
     }
