@@ -4,10 +4,10 @@ public class AccuracyDoubleFloat {
     // 4/3πR3
     public static double volumeBallDouble(double radius) {
         final double d1 = 4;
-        final double d2 = d1 / 3 * 3.14 * radius * radius * radius;
+        final double d3 = 3.14;
+        final double d2 = d1 / 3 * d3 * radius * radius * radius;
         System.out.println(d2);
         return d2;
-
 
     }
 
@@ -29,9 +29,7 @@ return f3;
     }
 
     public static void main(String[] args) {
-        volumeBallDouble(1);
-        volumeBallFloat(1);
-        calculateAccuracy(1);
+
 
     }
 }
