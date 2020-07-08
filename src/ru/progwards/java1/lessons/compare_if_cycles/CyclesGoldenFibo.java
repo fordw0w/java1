@@ -5,6 +5,7 @@ public class CyclesGoldenFibo {
     public static boolean containsDigit(int number, int digit) {
 
 // МНЕ ЗА ЭТУ РАЗРАБОТКУ ТАКУЮ ПРЕМИЮ ДАДУУТ..
+
         int a1 = number % 10;
         int a2 = number / 10;
         int a3 = a2 % 10;
@@ -26,24 +27,25 @@ public class CyclesGoldenFibo {
 
         if (number <= 9 && number == digit)
             return true;
-        if ((number <= 99) && (a1 == digit) | (a2 == digit))
+        else if ((number <= 99) && (a1 == digit) | (a2 == digit))
             return true;
-        if ((number <= 999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit))
+        else if ((number <= 999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit))
             return true;
-        if ((number <= 9999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit))
+        else if ((number <= 9999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit))
             return true;
-        if ((number <= 99999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit))
+        else if ((number <= 99999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit))
             return true;
-        if ((number <= 999999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit) | (a9 == digit) | (a10 == digit))
+        else if ((number <= 999999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit) | (a9 == digit) | (a10 == digit))
             return true;
-        if ((number <= 9999999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit) | (a9 == digit) | (a10 == digit) | (a11 == digit) | (a12 == digit))
+        else if ((number <= 9999999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit) | (a9 == digit) | (a10 == digit) | (a11 == digit) | (a12 == digit))
             return true;
-        if ((number <= 99999999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit) | (a9 == digit) | (a10 == digit) | (a11 == digit) | (a12 == digit) | (a13 == digit) | (a14 == digit))
+        else if ((number <= 99999999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit) | (a9 == digit) | (a10 == digit) | (a11 == digit) | (a12 == digit) | (a13 == digit) | (a14 == digit))
             return true;
-        if ((number <= 999999999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit) | (a9 == digit) | (a10 == digit) | (a11 == digit) | (a12 == digit) | (a13 == digit) | (a14 == digit) | (a15 == digit) | (a16 == digit))
+        else if ((number <= 999999999) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit) | (a9 == digit) | (a10 == digit) | (a11 == digit) | (a12 == digit) | (a13 == digit) | (a14 == digit) | (a15 == digit) | (a16 == digit))
             return true;
-        if ((number <= 2147483646) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit) | (a9 == digit) | (a10 == digit) | (a11 == digit) | (a12 == digit) | (a13 == digit) | (a14 == digit) | (a15 == digit) | (a16 == digit) | (a17 == digit) | (a18 == digit))
+        else if ((number <= 2147483646) && (a4 == digit) | (a2 == digit) | (a3 == digit) | (a1 == digit) | (a5 == digit) | (a6 == digit) | (a7 == digit) | (a8 == digit) | (a9 == digit) | (a10 == digit) | (a11 == digit) | (a12 == digit) | (a13 == digit) | (a14 == digit) | (a15 == digit) | (a16 == digit) | (a17 == digit) | (a18 == digit))
             return true;
+        else
         return false;
     }
 
@@ -81,7 +83,7 @@ public class CyclesGoldenFibo {
             int min = TriangleSimpleInfo.minSide(a, b, c);
             float f1 = (float) max;
             float f2 = (float) min;
-            float reb = f1 / f2;
+            float reb = f2 / f1;
             int rebi = (int) reb;
             System.out.println(TriangleSimpleInfo.maxSide(a, b, c) + " - Основание");
             System.out.println(TriangleSimpleInfo.minSide(a, b, c) + " - Ребро");
@@ -93,72 +95,22 @@ public class CyclesGoldenFibo {
              return false;
 
     }
-//if isIsoscelesTriangle
-//                to maxSide - находим большее значение
-//                это значение - основание
-//                находим ребра minSide
-//                ребро : ребро = ребро : основание
-//                1 = 0.6
-//                        1++  - 1.6
-//                                если 1.6 то ture
+
 
 
     public static void main(String[] args) {
-        System.out.println(containsDigit(523, 2));
-        System.out.println(isGoldenTriangle(55, 55, 89));
+        System.out.println(containsDigit(10, 0));
+        System.out.println(isGoldenTriangle(34, 34, 55));
         for (int i = 3; i <= 15; i++) {
             System.out.println(fiboNumber(i));
-            System.out.println(isGoldenTriangle(i, i, i));
         }
 
-
-//        int a = 3;
-//        int b = 2;
-//        int c = 2;
-////        boolean res1 == a >= 0;
-////        boolean res2 = (b >= 1 && b < 100);
-////        boolean res3 = (c >= 1 && c < 100);
-//
-//        if ((a >= 1 && a < 100) && (b >= 1 && b < 100) && (c >= 1 && c < 100)) {
-//            TriangleInfo.isTriangle(a, b, c);
-//            System.out.println("Если это натурально число, проверяем треугольник ли это");
-//        } else if (TriangleInfo.isTriangle(a, b, c)) {
-//            TriangleInfo.isIsoscelesTriangle(a, b, c);
-//            System.out.println("Проверяем, Равнобедренный ли треугольник");
-//        } else if (TriangleInfo.isIsoscelesTriangle(a, b, c)) {
-//            TriangleSimpleInfo.isEquilateralTriangle(a, b, c);
-//            System.out.println("Проверяем равносторонний ли");
-//        } else if (TriangleSimpleInfo.isEquilateralTriangle(a, b, c)) {
-//            TriangleSimpleInfo.minSide(a, b, c);
-//            TriangleSimpleInfo.maxSide(a, b, c);
-//            System.out.println("получаем основание треугольника = ");
-//            System.out.print(TriangleSimpleInfo.minSide(a, b, c));
-//            System.out.println("Получаем ребра треугольника = ");
-//            System.out.println(TriangleSimpleInfo.maxSide(a, b, c));
-//        } else {
-//
-//            System.out.println("Числа не подходят");
-//        }
+        System.out.println(isGoldenTriangle(3, 3, 5));
+        System.out.println(isGoldenTriangle(8, 13, 8));
+        System.out.println(isGoldenTriangle(34, 55, 34));
+        System.out.println(containsDigit(5, 0));
 
 
-
-
-        //if  natur chislo
-//to isTriangle(int a, int b, int c)
-//if  isTriangle true
-// pereminie kidaem v (ravnobedren)  isIsoscelesTriangle
-//if  isIsoscelesTriangle true
-//to peremenie kidaev v  isEquilateralTriangle
-//if isEquilateralTriangle true
-//to kidem peremenie v  minSide(int a, int b, int ) - osnovanie treugolnika
-//        vivodim chislo minSide - osnovanie treugolnika
-//        maxSide - rebra treugolnika
-//        vivodim na konsole max rebra min osnovanie
-//end
-
-
-//        }
-//    }
     }
 }
 

@@ -20,21 +20,39 @@ public class TriangleInfo {
     // bc^2 -  ac^2 + ab^2
 //    a2= b2 +c2
 //    например а - большая сторона, в и с - две другие
-//    находишь а^2 и b^2+c^2
+//    найти а^2 и b^2+c^2
 //    c * c = a * a + b * b
 //    a * a = c * c + b * b
 //    b * b = c * c + a * a
     public static boolean isRightTriangle(int a, int b, int c) {
-        int a1 = (b * b) + (c * c);
-        int a2 = a * a;
-        if (((a * a) + (b * b) == (c * c)) & ((c * c) + (b * b) == (a * a)) & ((c * c) + (a * a) == (b * b))) {
+
+        if (((c * c) == (a * a) + (b * b)) || ((a * a) == (c * c) + (b * b)) || ((b * b) == (c * c) + (a * a)))
             return true;
-        } else {
+        else
             return false;
-        }
-
-
     }
+    // 2 версия
+//        int max = TriangleSimpleInfo.maxSide(a, b, c);
+//        System.out.println("Максимальное значение " +max);
+//        int min = TriangleSimpleInfo.minSide(a, b, c);
+//        System.out.println("Минимальное значение " +min);
+//
+//        int qq = (max * max);
+//        int qq2 = (min * min) + (min * min);
+//        if (qq == qq2)
+//            return true;
+//        else return false;
+//    }
+
+    //  1 версия
+//        if (((a * a) + (b * b) == (c * c)) & ((c * c) + (b * b) == (a * a)) & ((c * c) + (a * a) == (b * b))) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+
+
+
 //    которая возвращает true, если треугольник со сторонами a, b, c является равнобедренным.
 //    Из геометрии известно, что в равнобедренном треугольнике есть две равные стороны.
     public static boolean isIsoscelesTriangle(int a, int b, int c) {
@@ -45,7 +63,7 @@ public class TriangleInfo {
     }
 
     public static void main(String[] args) {
-        System.out.println(isIsoscelesTriangle(23, 23, 12));
-        System.out.println(isRightTriangle(3, 3, 5));
+
+        System.out.println(isRightTriangle(21, 34, 39));
     }
 }
