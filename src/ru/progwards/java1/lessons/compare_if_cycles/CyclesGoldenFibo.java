@@ -112,7 +112,8 @@ public class CyclesGoldenFibo {
             int osn = c;
             float frebro = (float) rebro;
             float fosn = (float) osn;
-            float osnovanieC = fosn / frebro;
+//            float osnovanieC = fosn / frebro;
+              float osnovanieC = frebro / fosn;
 
             System.out.println(" делим основание на ребро получаем " + osnovanieC);
             if (osnovanieC >= 1.61703 && osnovanieC < 1.61903)
@@ -123,7 +124,8 @@ public class CyclesGoldenFibo {
             int osn1 = b;
             float frebro1 = (float) rebro1;
             float fosn1 = (float) osn1;
-            float osnovanieC1 = fosn1 / frebro1;
+//            float osnovanieC1 = fosn1 / frebro1;
+              float osnovanieC1 = frebro1 / fosn1;
             System.out.println(" делим основание на ребро получаем " + osnovanieC1);
             if (osnovanieC1 >= 1.61703 && osnovanieC1 < 1.61903)
                 return true;
@@ -133,7 +135,8 @@ public class CyclesGoldenFibo {
             int osn2 = a;
             float frebro2 = (float) rebro2;
             float fosn2 = (float) osn2;
-            float osnovanieC2 = fosn2 / frebro2;
+//            float osnovanieC2 = fosn2 / frebro2;
+            float osnovanieC2 = frebro2 / fosn2;
             System.out.println(" делим основание на ребро получаем " + osnovanieC2);
             if (osnovanieC2 >= 1.61703 && osnovanieC2 < 1.61903)
                 return true;
@@ -175,6 +178,7 @@ public class CyclesGoldenFibo {
         System.out.println(isGoldenTriangle(21,21,34));
         System.out.println(isGoldenTriangle(34,34,55));
         System.out.println(isGoldenTriangle(55,55,89));
+        System.out.println(isGoldenTriangle(55,55,34));
 //        int number= 12364364;
 //        int digit = 2;
 //        int q1 = 10;
