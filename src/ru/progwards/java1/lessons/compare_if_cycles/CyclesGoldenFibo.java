@@ -3,6 +3,8 @@ package ru.progwards.java1.lessons.compare_if_cycles;
 public class CyclesGoldenFibo {
     //    которая будет возвращать true, если число number содержит цифру digit.
     public static boolean containsDigit(int number, int digit) {
+        if (number == digit)
+            return true;
         int q1 = 10;
         int q2= 10;
         int q3 = number % 10;
@@ -131,7 +133,7 @@ public class CyclesGoldenFibo {
 //        for (int i = 3; i <= 15; i++) {
 //            System.out.println(fiboNumber(i));
 //        }
-        System.out.println(containsDigit(12456,0));
+        System.out.println(containsDigit(152342,2));
 //        int number= 12364364;
 //        int digit = 2;
 //        int q1 = 10;
