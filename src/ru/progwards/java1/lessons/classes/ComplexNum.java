@@ -1,4 +1,5 @@
 package ru.progwards.java1.lessons.classes;
+
 //Реализовать класс ComplexNum, реализующий операции в комплексных числах.
 //        Напоминаем, что комплексное число записывается как z = a + bi,
 //        где z это комплексное число, a действительная часть, b мнимая часть, i обозначение мнимой части.
@@ -9,7 +10,15 @@ private int a;
 private int c;
 private int d;
 private int b;
-
+private int i;
+private int bi = b + i;
+    private int ai = a + i;
+    private int ci = c + i;
+    private int di = d + i;
+// z - комплексное число
+    private int z;
+//    i * i = -1
+//    z = a + bi,
 
 
 //    3.1 конструктор
@@ -20,6 +29,7 @@ private int b;
         this.b = b;
         this.d = a;
         this.c = b;
+        this.z = a + bi;
 
     }
 
@@ -40,11 +50,48 @@ public String toString() {
 //            (a + bi) + (c + di) = (a + c) + (b + d)i
 public ComplexNum add(ComplexNum num) {
 
-    if ((a + b) + (c + d) == (a + c) + (b + d))
+    int a1 = (a + bi) + (c + di);
+    int b1 = (a + c) + (b + d) + i;
+    if (i + i == -1)
+if (a1 == b1)
+    return new ComplexNum(a1,b1);
 
-        return new ComplexNum(a,b);
     return num;
 }
+//    public ComplexNum sub(ComplexNum num), вычитание комплексных чисел по формуле:
+//            (a + bi) - (c + di) = (a - c) + (b - d)i
+public ComplexNum sub(ComplexNum num) {
+        int a1 =  (a + bi) - (c + di);
+        int a2 = (a - c) + (b - d) +i;
+    if (i + i == -1)
+        if (a1 == a2)
+            return new ComplexNum(a1,a2);
+
+    return num;
+}
+//    public ComplexNum mul(ComplexNum num), умножение комплексных чисел по формуле:
+//            (a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i
+public ComplexNum mul(ComplexNum num){
+    int a1 =  (a + bi) * (c + di);
+    int a2 = (a*c - b*d) + (b*c + a*d) * i;
+    if (i + i == -1)
+        if (a1 == a2)
+            return new ComplexNum(a1,a2);
+
+    return num;
+}
+//    public ComplexNum div(ComplexNum num), деление комплексных чисел по формуле:
+//            (a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i
+public ComplexNum div(ComplexNum num){
+    int a1 =   (a + bi) / (c + di);
+    int a2 = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d)) *i;
+    if (i + i == -1)
+        if (a1 == a2)
+            return new ComplexNum(a1,a2);
+
+    return num;
+}
+
 
 
 }
