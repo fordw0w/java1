@@ -10,7 +10,9 @@ private int a;
 private int c;
 private int d;
 private int b;
+private int bi = b;
 private int i;
+private int di = d;
 
 // z - комплексное число
     private int z;
@@ -26,6 +28,7 @@ private int i;
         this.b = b;
         this.d = d;
         this.c = c;
+        this.z = a + b;
 
 
     }
@@ -46,10 +49,10 @@ public String toString() {
 //    public ComplexNum add(ComplexNum num), сложение комплексных чисел по формуле:
 //            (a + bi) + (c + di) = (a + c) + (b + d)i
 public ComplexNum add(ComplexNum num) {
-
+int a1 = (a + bi) + (c + di);
     int b1 = (a + c) + (b + d) + i;
 
-    return new ComplexNum(a,b);
+    return new ComplexNum(a1,b1);
 
 
 }
