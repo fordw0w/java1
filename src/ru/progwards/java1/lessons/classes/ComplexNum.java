@@ -21,12 +21,12 @@ private int i;
 //    3.1 конструктор
 //    public ComplexNum(int a, int b), который инициализирует комплексное число
 
-    public ComplexNum(int a, int b){
+    public ComplexNum(int a, int b) {
         this.a = a;
         this.b = b;
         this.d = d;
         this.c = c;
-        this.z = a + bi;
+
 
     }
 
@@ -47,7 +47,7 @@ public String toString() {
 //            (a + bi) + (c + di) = (a + c) + (b + d)i
 public ComplexNum add(ComplexNum num) {
 
-    int b1 = (a + c) + (b + d);
+    int b1 = (a + c) + (b + d) + i;
 
     return new ComplexNum(a,b);
 
@@ -56,7 +56,7 @@ public ComplexNum add(ComplexNum num) {
 //    public ComplexNum sub(ComplexNum num), вычитание комплексных чисел по формуле:
 //            (a + bi) - (c + di) = (a - c) + (b - d)i
 public ComplexNum sub(ComplexNum num) {
-        int a1 =  (a + bi) - (c + di);
+        int a1 =  (a + b) - (c + d);
         int a2 = (a - c) + (b - d) +i;
     if (i + i == -1)
         if (a1 == a2)
@@ -67,7 +67,7 @@ public ComplexNum sub(ComplexNum num) {
 //    public ComplexNum mul(ComplexNum num), умножение комплексных чисел по формуле:
 //            (a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i
 public ComplexNum mul(ComplexNum num){
-    int a1 =  (a + bi) * (c + di);
+    int a1 =  (a + b) * (c + d);
     int a2 = (a*c - b*d) + (b*c + a*d) * i;
     if (i + i == -1)
         if (a1 == a2)
@@ -78,7 +78,7 @@ public ComplexNum mul(ComplexNum num){
 //    public ComplexNum div(ComplexNum num), деление комплексных чисел по формуле:
 //            (a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i
 public ComplexNum div(ComplexNum num){
-    int a1 =   (a + bi) / (c + di);
+    int a1 =   (a + b) / (c + d);
     int a2 = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d)) *i;
     if (i + i == -1)
         if (a1 == a2)
