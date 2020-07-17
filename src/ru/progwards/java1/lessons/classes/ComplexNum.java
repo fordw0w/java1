@@ -11,10 +11,7 @@ private int c;
 private int d;
 private int b;
 private int i;
-private int bi = b + i;
-    private int ai = a + i;
-    private int ci = c + i;
-    private int di = d + i;
+
 // z - комплексное число
     private int z;
 //    i * i = -1
@@ -27,8 +24,8 @@ private int bi = b + i;
     public ComplexNum(int a, int b){
         this.a = a;
         this.b = b;
-        this.d = a;
-        this.c = b;
+        this.d = d;
+        this.c = c;
         this.z = a + bi;
 
     }
@@ -41,8 +38,8 @@ public String toString() {
     if (b == 0)
         return a + "i";
     if (a <  0)
-        return b + " - " + (-b) + "i";
-    return a + " + " + b + "i";
+        return b + "-" + (-b) + "i";
+    return a + "+" + b + "i";
 }
 
 //3.3 метод
@@ -50,13 +47,11 @@ public String toString() {
 //            (a + bi) + (c + di) = (a + c) + (b + d)i
 public ComplexNum add(ComplexNum num) {
 
-    int a1 = (a + bi) + (c + di);
-    int b1 = (a + c) + (b + d) + i;
-    if (i + i == -1)
-if (a1 == b1)
-    return new ComplexNum(a1,b1);
+    int b1 = (a + c) + (b + d);
 
-    return num;
+    return new ComplexNum(a,b);
+
+
 }
 //    public ComplexNum sub(ComplexNum num), вычитание комплексных чисел по формуле:
 //            (a + bi) - (c + di) = (a - c) + (b - d)i
