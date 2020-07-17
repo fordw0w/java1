@@ -6,7 +6,10 @@ package ru.progwards.java1.lessons.classes;
 
 public class ComplexNum {
 private int a;
+private int c;
+private int d;
 private int b;
+
 
 
 //    3.1 конструктор
@@ -15,9 +18,10 @@ private int b;
     public ComplexNum(int a, int b){
         this.a = a;
         this.b = b;
+        this.d = a;
+        this.c = b;
 
     }
-
 
 //    public String toString(), приведение к строке, выдать в формате a+bi,
 //    например, при a=1 и b=56 должно быть выдано 1+56i
@@ -30,9 +34,18 @@ public String toString() {
         return b + " - " + (-b) + "i";
     return a + " + " + b + "i";
 }
+
 //3.3 метод
 //    public ComplexNum add(ComplexNum num), сложение комплексных чисел по формуле:
 //            (a + bi) + (c + di) = (a + c) + (b + d)i
+public ComplexNum add(ComplexNum num) {
+
+    if ((a + b) + (c + d) == (a + c) + (b + d))
+
+        return new ComplexNum(a,b);
+    return num;
+}
+
 
 }
 
