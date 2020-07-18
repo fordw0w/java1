@@ -37,8 +37,8 @@ public ComplexNum(int a, int b) {
 //          a           b
 
     public ComplexNum add(ComplexNum num) {
-    a = a + b; // целые
-    b = c + d; // мнимые
+    a = a + c; // целые
+    b = b + d; // мнимые
 z = a + b;
 
     return new ComplexNum(a,b);
