@@ -26,7 +26,7 @@ public ComplexNum(int a, int b) {
 //          a           b
 }
     public ComplexNum(int z){
-
+this.z = z;
     }
 
 //3.2 метод
@@ -69,6 +69,10 @@ public ComplexNum mul(ComplexNum num){
     a = a * c / c * c;
     b = b * d / d * d;
         return new ComplexNum(a,b);
+    }
+
+    public static void main(String[] args) {
+
     }
 }
 
