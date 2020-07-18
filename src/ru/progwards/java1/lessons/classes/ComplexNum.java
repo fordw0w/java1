@@ -21,12 +21,10 @@ public ComplexNum(int a, int b) {
 
 
 
-//    public ComplexNum add(ComplexNum num), сложение комплексных чисел по формуле:
-//    (a + bi) + (c + di) = (a + c) + (b + d)i
-//          a           b
+
 }
     public ComplexNum(int z){
-this.z = z;
+
     }
 
 //3.2 метод
@@ -37,15 +35,16 @@ this.z = z;
     return Integer.toString(a) + "+" + Integer.toString(b) + "i";
     }
 
-//    сложение комплексных чисел по формуле:
-//            (a + bi) + (c + di) = (a + c) + (b + d)i
+//    public ComplexNum add(ComplexNum num), сложение комплексных чисел по формуле:
+//    (a + bi) + (c + di) = (a + c) + (b + d)i
+//          a           b
 
-    public ComplexNum add(ComplexNum num){
-    int a1 = a + c; // целые
-    int a2 = b + d; // мнимые
-//z = a + b;
+    public ComplexNum add(ComplexNum num) {
+    a = a + b; // целые
+    b = d + c; // мнимые
+z = a + b;
 
-    return new ComplexNum(a1, a2);
+    return new ComplexNum(a,b);
     }
 //    вычитание комплексных чисел по формуле:
 //            (a + bi) - (c + di) = (a - c) + (b - d)i
@@ -71,9 +70,6 @@ public ComplexNum mul(ComplexNum num){
         return new ComplexNum(a,b);
     }
 
-    public static void main(String[] args) {
-
-    }
 }
 
 
