@@ -41,11 +41,11 @@ this.z = z;
 //            (a + bi) + (c + di) = (a + c) + (b + d)i
 
     public ComplexNum add(ComplexNum num){
-    a = a + c; // целые
-    b = b + d; // мнимые
-z = a + b;
+    int a1 = a + c; // целые
+    int a2 = b + d; // мнимые
+//z = a + b;
 
-    return new ComplexNum(z);
+    return new ComplexNum(a1, a2);
     }
 //    вычитание комплексных чисел по формуле:
 //            (a + bi) - (c + di) = (a - c) + (b - d)i
