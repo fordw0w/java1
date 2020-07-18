@@ -20,10 +20,14 @@ public ComplexNum(int a, int b) {
 
 
 
+
 //    public ComplexNum add(ComplexNum num), сложение комплексных чисел по формуле:
 //    (a + bi) + (c + di) = (a + c) + (b + d)i
 //          a           b
 }
+    public ComplexNum(int z){
+
+    }
 
 //3.2 метод
 //    public String toString(), приведение к строке, выдать в формате a+bi,
@@ -33,18 +37,22 @@ public ComplexNum(int a, int b) {
     return Integer.toString(a) + "+" + Integer.toString(b) + "i";
     }
 
+//    сложение комплексных чисел по формуле:
+//            (a + bi) + (c + di) = (a + c) + (b + d)i
 
     public ComplexNum add(ComplexNum num){
     a = a + c; // целые
     b = b + d; // мнимые
+z = a + b;
 
-    return new ComplexNum(a,b);
+    return new ComplexNum(z);
     }
 //    вычитание комплексных чисел по формуле:
 //            (a + bi) - (c + di) = (a - c) + (b - d)i
     public ComplexNum sub(ComplexNum num) {
         a = a - c; // целые
         b = b - d; // мнимые
+        z = a - b;
         return new ComplexNum(a,b);
     }
 //    public ComplexNum mul(ComplexNum num), умножение комплексных чисел по формуле:
