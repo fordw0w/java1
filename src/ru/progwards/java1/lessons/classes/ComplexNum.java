@@ -6,21 +6,18 @@ package ru.progwards.java1.lessons.classes;
 //        a и b реализуем целыми числами
 
 public class ComplexNum {
+
     private int a;
     private int b;
     private int z;
-    private int c;
-    private int d;
+    private final int c = a;
+    private final int d = b;
 
 //3.1 конструктор
 //    public ComplexNum(int a, int b), который инициализирует комплексное число
 public ComplexNum(int a, int b) {
     this.a = a;
     this.b = b;
-
-
-
-
 
 }
     public ComplexNum(int z){
@@ -41,7 +38,7 @@ public ComplexNum(int a, int b) {
 
     public ComplexNum add(ComplexNum num) {
     a = a + b; // целые
-    b = d + c; // мнимые
+    b = c + d; // мнимые
 z = a + b;
 
     return new ComplexNum(a,b);
@@ -69,6 +66,8 @@ public ComplexNum mul(ComplexNum num){
     b = b * d / d * d;
         return new ComplexNum(a,b);
     }
+
+
 
 }
 
