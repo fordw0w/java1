@@ -44,9 +44,9 @@ public String toString() {
 //          a           b
 
     public ComplexNum add(ComplexNum num) {
-
-    int a = this.a + this.c; // целые
- int b = this.b + this.d; // мнимые
+ComplexNum a1 = this;
+    int a = a1.a + num.a; // целые
+ int b = a1.b + num.b; // мнимые
 
 
     return new ComplexNum(a,b);
