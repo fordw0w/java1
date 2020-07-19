@@ -17,7 +17,7 @@ public class ComplexNum {
 //    public ComplexNum(int a, int b), который инициализирует комплексное число
 public ComplexNum(int a, int b) {
     this.a = a;
-    this.b = b;
+    this.b = b + a;
 
 
 }
@@ -36,8 +36,8 @@ public ComplexNum(int a, int b) {
 //          a           b
 
     public ComplexNum add(ComplexNum num) {
-    final int a1 = a + c; // целые
-    final int b1 = b + d; // мнимые
+    int a1 = a + c; // целые
+   int b1 = b + d; // мнимые
 
 
     return new ComplexNum(a1,b1);
