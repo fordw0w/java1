@@ -10,8 +10,8 @@ public class ComplexNum {
     private int a;
     private int b;
     private int z;
-private int c = a;
-private int d = b;
+private final int c = a;
+private final int d = b;
 
 //3.1 конструктор
 //    public ComplexNum(int a, int b), который инициализирует комплексное число
