@@ -10,16 +10,13 @@ public class ComplexNum {
     private int a;
     private int b;
     private int z;
-    private  int c;
-    private  int d;
+
 
 //3.1 конструктор
 //    public ComplexNum(int a, int b), который инициализирует комплексное число
 public ComplexNum(int a, int b) {
     this.a = a;
     this.b = b;
-
-
 }
 
 
