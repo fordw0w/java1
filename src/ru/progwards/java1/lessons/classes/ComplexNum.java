@@ -31,10 +31,13 @@ public ComplexNum(int a, int b) {
 //    return Integer.toString(a) + "+" + Integer.toString(b) + "i";
 //    }
 public String toString() {
-    if (b == 0) return a + "";
-    if (a == 0) return b + "i";
-    if (b <  0) return a + " - " + (-b) + "i";
-    return a + " + " + b + "i";
+    if (b == 0)
+        return a + "";
+    if (a == 0)
+        return b + "i";
+    if (b <  0)
+        return a + "-" + (-b) + "i";
+    return a + "+" + b + "i";
 }
 
 //    public ComplexNum add(ComplexNum num), сложение комплексных чисел по формуле:
