@@ -17,7 +17,7 @@ public class ComplexNum {
 //    public ComplexNum(int a, int b), который инициализирует комплексное число
 public ComplexNum(int a, int b) {
     this.a = a;
-    this.b = b + a;
+    this.b = b;
 
 
 }
@@ -27,20 +27,26 @@ public ComplexNum(int a, int b) {
 //    public String toString(), приведение к строке, выдать в формате a+bi,
 //    например, при a=1 и b=56 должно быть выдано 1+56i
 
-    public String toString(){
-    return Integer.toString(a) + "+" + Integer.toString(b) + "i";
-    }
+//    public String toString(){
+//    return Integer.toString(a) + "+" + Integer.toString(b) + "i";
+//    }
+public String toString() {
+    if (b == 0) return a + "";
+    if (a == 0) return b + "i";
+    if (b <  0) return a + " - " + (-b) + "i";
+    return a + " + " + b + "i";
+}
 
 //    public ComplexNum add(ComplexNum num), сложение комплексных чисел по формуле:
 //    (a + bi) + (c + di) = (a + c) + (b + d)i
 //          a           b
 
     public ComplexNum add(ComplexNum num) {
-    int a1 = a + c; // целые
-   int b1 = b + d; // мнимые
+    a = a + c; // целые
+ b = b + d; // мнимые
 
 
-    return new ComplexNum(a1,b1);
+    return new ComplexNum(a,b);
     }
 //    вычитание комплексных чисел по формуле:
 //            (a + bi) - (c + di) = (a - c) + (b - d)i
