@@ -10,8 +10,8 @@ public class ComplexNum {
     private int a;
     private int b;
     private int z;
-private final int c = a;
-private final int d = b;
+private int  c;
+private int d;
 
 //3.1 конструктор
 //    public ComplexNum(int a, int b), который инициализирует комплексное число
@@ -38,13 +38,15 @@ public String toString() {
     return a + "+" + b + "i";
 }
 
+
 //    public ComplexNum add(ComplexNum num), сложение комплексных чисел по формуле:
 //    (a + bi) + (c + di) = (a + c) + (b + d)i
 //          a           b
 
     public ComplexNum add(ComplexNum num) {
-    a = a + c; // целые
- b = b + d; // мнимые
+
+    int a = this.a + this.c; // целые
+ int b = this.b + this.d; // мнимые
 
 
     return new ComplexNum(a,b);
