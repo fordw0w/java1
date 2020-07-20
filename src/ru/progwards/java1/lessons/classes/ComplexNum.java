@@ -62,9 +62,7 @@ ComplexNum a1 = this;
 //            (a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i =ac - bd
 
 public ComplexNum mul(ComplexNum num){
-//    int a = this.a * num.a - this.b - num.b;
     int a = (this.a * num.a) - this.b * num.b;
-//    int b = this.a * num.b - this.b - num.a;
     int b = (this.b * num.a) + (this.a * num.b);
     return new ComplexNum(a,b);
 }
@@ -72,9 +70,10 @@ public ComplexNum mul(ComplexNum num){
 //            (a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i
 
     public ComplexNum div(ComplexNum num){
-    int a = (this.a * num.a + num.b * num.b) / (num.a * num.a + num.b * num.b);
+    int a = ((this.a * num.a) + (num.b * num.b)) / ((num.a * num.a) + (num.b * num.b));
+        int a1 = a * 100;
    int b = (this.b * num.a - this.a * num.b) / (num.a * num.a + num.b * num.b);
-        return new ComplexNum(a,b);
+        return new ComplexNum(a1,b);
     }
 
 
