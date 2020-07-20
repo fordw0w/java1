@@ -62,8 +62,10 @@ ComplexNum a1 = this;
 //            (a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i =ac - bd
 
 public ComplexNum mul(ComplexNum num){
-    int a = this.a * num.a - this.b - num.b;
-    int b = this.a * num.b - this.b - num.a -1;
+//    int a = this.a * num.a - this.b - num.b;
+    int a = (this.a * num.a) -1;
+//    int b = this.a * num.b - this.b - num.a;
+    int b = this.b * num.b;
     return new ComplexNum(a,b);
 }
 //    public ComplexNum div(ComplexNum num), деление комплексных чисел по формуле:
