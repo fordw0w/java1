@@ -59,11 +59,11 @@ ComplexNum a1 = this;
         return new ComplexNum(a,b);
     }
 //    public ComplexNum mul(ComplexNum num), умножение комплексных чисел по формуле:
-//            (a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i
+//            (a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i =ac - bd
 
 public ComplexNum mul(ComplexNum num){
     int a = this.a * num.a - this.b - num.b;
-    int b = this.a * num.b - this.b - num.a;
+    int b = this.a * num.b - this.b - num.a -1;
     return new ComplexNum(a,b);
 }
 //    public ComplexNum div(ComplexNum num), деление комплексных чисел по формуле:
