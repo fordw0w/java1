@@ -7,8 +7,8 @@ package ru.progwards.java1.lessons.classes;
 
 public class ComplexNum {
 
-    private int a;
-    private int b;
+   final private int a;
+   final private int b;
 
 //3.1 конструктор
 //    public ComplexNum(int a, int b), который инициализирует комплексное число
@@ -62,16 +62,16 @@ ComplexNum a1 = this;
 //            (a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i
 
 public ComplexNum mul(ComplexNum num){
-    a = this.a * num.a - b - num.b;
-    b = this.b * num.b - a - num.a;
+    int a = this.a * num.a - this.b - num.b;
+    int b = this.a * num.b - this.b - num.a;
     return new ComplexNum(a,b);
 }
 //    public ComplexNum div(ComplexNum num), деление комплексных чисел по формуле:
 //            (a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i
 
     public ComplexNum div(ComplexNum num){
-    int a = this.a * num.a / num.a * num.a;
-   int b = this.b * num.b / num.b * num.b;
+    int a = (this.a * num.a + num.b * num.b) / (num.a * num.a + num.b * num.b);
+   int b = (this.b * num.a - this.a * num.b) / (num.a * num.a + num.b * num.b);
         return new ComplexNum(a,b);
     }
 
