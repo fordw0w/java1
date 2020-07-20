@@ -47,10 +47,6 @@ public ComplexNum mul(ComplexNum num){
         int i = (num.a * num.a + num.b * num.b);
         int a = (this.a * num.a + this.b * num.b) / i;
         int b = (this.b * num.a - this.a * num.b) / i;
-////        int a = (this.a * num.a + num.b * num.b) / i;
-//        int a = (this.a* num.a) + (this.a* num.b) + (b* num.a) - (b * num.b);
-
-//   int b = (this.b * num.a - this.a * num.b) / i;
         return new ComplexNum(a,b);
     }
 
