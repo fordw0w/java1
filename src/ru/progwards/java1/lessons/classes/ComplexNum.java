@@ -7,8 +7,8 @@ package ru.progwards.java1.lessons.classes;
 
 public class ComplexNum {
 
-   final private int a;
-   final private int b;
+    private int a;
+    private int b;
 
 //3.1 конструктор
 //    public ComplexNum(int a, int b), который инициализирует комплексное число
@@ -22,18 +22,18 @@ public ComplexNum(int a, int b) {
 //    public String toString(), приведение к строке, выдать в формате a+bi,
 //    например, при a=1 и b=56 должно быть выдано 1+56i
 
-    public String toString(){
-    return Integer.toString(a) + "+" + Integer.toString(b) + "i";
-    }
-//public String toString() {
-//    if (b == 0)
-//        return a + "";
-//    if (a == 0)
-//        return b + "i";
-//    if (b <  0)
-//        return a + "-" + (-b) + "i";
-//    return a + "+" + b + "i";
-//}
+//    public String toString(){
+//    return Integer.toString(a) + "+" + Integer.toString(b) + "i";
+//    }
+public String toString() {
+    if (b == 0)
+        return a + "";
+    if (a == 0)
+        return b + "i";
+    if (b <  0)
+        return a + "-" + (-b) + "i";
+    return a + "+" + b + "i";
+}
 
 
 //    public ComplexNum add(ComplexNum num), сложение комплексных чисел по формуле:
@@ -70,8 +70,8 @@ public ComplexNum mul(ComplexNum num){
 //            (a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i
 
     public ComplexNum div(ComplexNum num){
-        int i = (num.a * num.a) + (num.b * num.b);
-        int a = ((this.a * num.a) + (num.b * num.b)) / i;
+        int i = (num.a * num.a + num.b * num.b);
+        int a = (this.a * num.a + num.b * num.b) / i;
 
    int b = (this.b * num.a - this.a * num.b) / i;
         return new ComplexNum(a,b);
