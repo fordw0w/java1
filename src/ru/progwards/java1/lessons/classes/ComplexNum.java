@@ -9,9 +9,6 @@ public class ComplexNum {
 
     private int a;
     private int b;
-    private int z;
-private int  c;
-private int d;
 
 //3.1 конструктор
 //    public ComplexNum(int a, int b), который инициализирует комплексное число
@@ -47,31 +44,34 @@ public String toString() {
 ComplexNum a1 = this;
     int a = a1.a + num.a; // целые
  int b = a1.b + num.b; // мнимые
-
-
+//        a = a + c; // целые
+//        b = b + d; //
     return new ComplexNum(a,b);
     }
+
 //    вычитание комплексных чисел по формуле:
 //            (a + bi) - (c + di) = (a - c) + (b - d)i
     public ComplexNum sub(ComplexNum num) {
-        a = a - c; // целые
-        b = b - d; // мнимые
-        z = a - b;
+//
+        ComplexNum a1 = this;
+        int a = a1.a - num.a; // целые
+        int b = a1.b - num.b; // мнимые
         return new ComplexNum(a,b);
     }
 //    public ComplexNum mul(ComplexNum num), умножение комплексных чисел по формуле:
 //            (a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i
+
 public ComplexNum mul(ComplexNum num){
-    a = a * c;
-    b = b * d;
+    a = this.a * num.a - b - num.b;
+    b = this.b * num.b - a - num.a;
     return new ComplexNum(a,b);
 }
 //    public ComplexNum div(ComplexNum num), деление комплексных чисел по формуле:
 //            (a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i
 
     public ComplexNum div(ComplexNum num){
-    a = a * c / c * c;
-    b = b * d / d * d;
+    int a = this.a * num.a / num.a * num.a;
+   int b = this.b * num.b / num.b * num.b;
         return new ComplexNum(a,b);
     }
 
